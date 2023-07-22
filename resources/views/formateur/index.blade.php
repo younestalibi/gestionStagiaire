@@ -31,7 +31,7 @@
 <div class="container">
   <h2 class="my-3">List des Etudiants</h2>
   <div class="container">
-    <h2 class="my-3">List of Students</h2>
+    <h3 class="my-3 text-muted">Search</h3>
     <div class="input-group mb-3">
       <input type="text" id="searchInput" class="form-control" placeholder="Search students...">
       {{-- <button id="search" class="btn btn-primary">Search</button> --}}

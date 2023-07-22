@@ -45,8 +45,8 @@
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <h1 class="text-center text-warning">{{auth()->user()->name}}</h1>
+  <div class="sidebar p-0 ">
+    <h1 class="text-center text-dark bg-light p-3">{{auth()->user()->name}}</h1>
     @yield('list')
   </div>
 
@@ -83,7 +83,7 @@
                         @endif
                     @else
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class=" nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </a>
 

@@ -42,7 +42,7 @@
                 <td>{{ date('Y-m-d') }}</td>
                 @if($student->absence)
                 <td>
-                    @if($student->absence->updated_at->format('Y-m-d')==date('Y-m-d'))
+                    @if($student->absence->updated_at->format('Y-m-d')==date('Y-m-d')  && $student->absence->updated_at != $student->absence->created_at)
                     <button disabled  class="btn btn-success w-50 mx-auto">Déjà absent</button>
                     @else
                     <form action={{route('absent',['user'=>$student->id])}} method="POST">
