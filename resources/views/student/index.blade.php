@@ -16,7 +16,13 @@
     <div class="card my-3">
         <div class="card-body">
           <h5 class="card-title">{{ auth()->user()->name }}</h5>
-          <p class="card-text">Number of Absents: <b>{{ auth()->user()->absence->status }}</b></p>
+          <p class="card-text">Number of Absents: <b>
+            @if(auth()->user()->absence)
+            {{ auth()->user()->absence->status }}
+            @else
+            0
+            @endif
+            </b></p>
           <p class="card-text">Code Etudiant: <b>{{ auth()->user()->id }}</b></p>
           <p class="card-text">Email: {{ auth()->user()->email }}</p>
         </div>

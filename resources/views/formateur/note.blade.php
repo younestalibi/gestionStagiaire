@@ -17,7 +17,14 @@
     <div class="card my-3">
         <div class="card-body">
           <h5 class="card-title">{{ $user->name }}</h5>
-          <p class="card-text">Number of Absents: <b>{{ $user->absence->status }}</b></p>
+          <p class="card-text">Number of Absents: <b>
+            
+            @if($user->absence)
+            {{ $user->absence->status }}
+            @else
+            0
+            @endif
+          </b></p>
           <p class="card-text">Code Etudiant: <b>{{ $user->id }}</b></p>
           <p class="card-text">Email: {{ $user->email }}</p>
         </div>
